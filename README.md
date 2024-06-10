@@ -20,6 +20,7 @@
 | Emanuel    |                            |
 | Jeet       |                            |
 | Charles    |                            |
+| Vikranth   | Video Presentation         |
 
 ### Proposal Contributions
 
@@ -29,3 +30,4 @@
 | Emanuel    |                             |
 | Jeet       |                             |
 | Charles    |                             |
+| Vikranth   | Video Presentation          |
