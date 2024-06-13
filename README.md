@@ -17,7 +17,9 @@
 | **Member** | **Proposed Contributions** |
 | ---------- | -------------------------- |
 | Ankith     | Making Website             |
-| Emanuel    |                            |
+| Emanuel    | Wrote Introduction,        |
+|            |    thought of the idea,    |  
+|            |    literature review       |
 | Jeet       |                            |
 | Charles    |                            |
 | Vikranth   | Video Presentation         |
