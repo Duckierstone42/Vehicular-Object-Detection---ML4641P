@@ -1,34 +1,44 @@
 # ML4641Project
 
 ## Introduction/Background
-  We will use unsupervised learning algorithms to create a pairs trading strategy. We will use clustering/unsupervised learning to find related stocks. We will incorporate a long-short strategy. We will use supervised learning with the stock pairs as labels. When a pair of stocks deviates from its cluster, we will go long, the falling one stock and short the rising stock. We will use Profit-Loss to determine the success of our process.
-Related literature includes: Pairs Trading Via Unsupervised Learning by Han, He, and Toh (2021) which creates an unsupervised learning pairs trading strategy using firm characteristics; Optimized Pair Trading Strategy using Unsupervised Machine Learning by Gupta, Kumar, Yuvraj (2023) which uses clustering algorithms to pair stocks and optimizes them using the Engle-Granger test; Pairs Trading Using Clustering and Deep Reinforcement Learning by Roychoudhury, Bhagtani, and Daftari (2023) which uses clustering and reinforcement learning to avoid the conventional linear assumption of paired stocks.
-We will be using OHLC charts from Yahoo Finance. For example: [https://finance.yahoo.com/quote/AAPL/history/] contains a button for downloading historical daily data. We will choose a basket of stocks based on industry and assumed completion, and then download their data.
 
+For our project we wish to apply object-detection to the field of self-driving, specifically by implementing machine learning models that can detect vehicles, specifically cars, as shown in our [dataset](https://www.kaggle.com/datasets/sshikamaru/car-object-detection). This dataset includes over 1000 training images as well as 175 testing images, where image comes with a corresponding set of labels which indicate the size, position, and type of objects located in the image. If we end up needing more data, particularly to train some of the larger deep learning models we plan on using other datasets like the [car tracking and object detection dataset](https://www.kaggle.com/datasets/trainingdatapro/cars-video-object-tracking), which contains similar images, albeit at a different angle, perhaps allowing our models to better generalize. We currently plan on finetuning a variety of state-of the art object detection models [1], such as YOLO-v7 [2], and have looked at how others have applied such models onto the problem of vehicle detection [3].
 
 ## Problem Definition
-  It is important to have a trading strategy to be an investor and not a speculator. Predicting and understanding stock price movement is notoriously difficult though. Thus we need to utilize machine learning to find patterns in the data that is hidden from plain observation.
 
+With self-driving cars becoming more and more relevant in current society, it is crucially important that they are able to detect other vehicles to prevent collision in a reliable, quick manner. We seek to explore and expand upon existing methods of using machine learning techniques to detect vehicles.
 
 ## Methods
 
+Due to the relatively low amount of data, we plan on increasing the amount and diversity of the data using data augmentation techniques such as color jittering, guassian noise, or blurring. We are relatively limited
+
+As of right now we plan on finetuning various state of the art object detection models available, such as
+
 ## Results and Discussion
 
+We plan to use accuracy, latency, as well as mAP (mean average precision), a benchmark often used for detection problems. While it may be unrealistic to achieve in the tight timeframe of this project, we hope to be able to create/fine-tune object detection models capable of detecting vehicles with quantitative metrics at the level other papers have achieved on the same problem. For example, [3] was able to train a YOLOv3 model to achieve a mAP of 72.8. Realistically though, we hope to be able to train/finetune an object-detection model at a minimum mAP of around 20-30, a base value which should hopefully indicate that our model
+
 ## References
+
+[1] S. S. A. Zaidi, M. S. Ansari, A. Aslam, N. Kanwal, M. Asghar, and B. Lee, “A Survey of Modern Deep Learning based Object Detection Models.” arXiv, May 12, 2021. doi: 10.48550/arXiv.2104.11892.
+
+[2] C.-Y. Wang, A. Bochkovskiy, and H.-Y. M. Liao, “YOLOv7: Trainable bag-of-freebies sets new state-of-the-art for real-time object detectors.” arXiv, Jul. 06, 2022. doi: 10.48550/arXiv.2207.02696.
+
+[3] Y. Chen and Z. Li, “An Effective Approach of Vehicle Detection Using Deep Learning,” Comput Intell Neurosci, vol. 2022, p. 2019257, Jul. 2022, doi: 10.1155/2022/2019257.
 
 ## Contributions
 
 ### Gant Chart
 
-| **Member** | **Proposed Contributions** |
-| ---------- | -------------------------- |
-| Ankith     | Making Website             |
-| Emanuel    | Wrote Introduction,        |
-|            |    thought of the idea,    |  
-|            |literature review, prob def |
-| Jeet       |                            |
-| Charles    |                            |
-| Vikranth   | Video Presentation         |
+| **Member** | **Proposed Contributions**  |
+| ---------- | --------------------------- |
+| Ankith     | Making Website              |
+| Emanuel    | Wrote Introduction,         |
+|            | thought of the idea,        |
+|            | literature review, prob def |
+| Jeet       |                             |
+| Charles    |                             |
+| Vikranth   | Video Presentation          |
 
 ### Proposal Contributions
 
