@@ -28,9 +28,9 @@ We plan to use accuracy, latency, as well as mAP (mean average precision), a ben
 
 ## Contributions
 
-### Gant Chart
+### Proposal Chart
 
-| **Member** | **Proposed Contributions**  |
+| **Member** | **Contributions**  |
 | ---------- | --------------------------- |
 | Ankith     | Making Website              |
 | Emanuel    | Wrote Introduction,         |
@@ -40,7 +40,7 @@ We plan to use accuracy, latency, as well as mAP (mean average precision), a ben
 | Charles    |                             |
 | Vikranth   | Video Presentation          |
 
-### Proposal Contributions
+### Gant Chart
 
 | **Member** | **Contributions**           |
 | ---------- | --------------------------- |
