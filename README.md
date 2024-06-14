@@ -36,8 +36,8 @@ We plan to use accuracy, latency, as well as mAP (mean average precision), a ben
 | Emanuel    | Wrote Introduction,         |
 |            | thought of the idea,        |
 |            | literature review, prob def |
-| Jeet       |                             |
-| Charles    |                             |
+| Jeet       | Research                    |
+| Charles    | Research                    |
 | Vikranth   | Video Presentation          |
 
 ### Gant Chart
@@ -45,7 +45,7 @@ We plan to use accuracy, latency, as well as mAP (mean average precision), a ben
 | **Member** | **Contributions**           |
 | ---------- | --------------------------- |
 | Ankith     | Making website for proposal |
-| Emanuel    |                             |
-| Jeet       |                             |
-| Charles    |                             |
+| Emanuel    | Literature Review           |
+| Jeet       | Research                    |
+| Charles    | Research                    |
 | Vikranth   | Video Presentation          |
