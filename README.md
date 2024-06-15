@@ -38,7 +38,7 @@ We plan to use accuracy, latency, as well as mAP (mean average precision), a ben
 | Charles    | Research                    |
 | Vikranth   | Video Presentation          |
 
-### Gant Chart
+### Gant Chart (See Excel File in Repo For More Information)
 
 | **Member** | **Contributions**           |
 | ---------- | --------------------------- |
