@@ -33,9 +33,7 @@ We plan to use accuracy, latency, as well as mAP (mean average precision), a ben
 | **Member** | **Contributions**  |
 | ---------- | --------------------------- |
 | Ankith     | Website, writing problem definition/methods            |
-| Emanuel    | Wrote Introduction,         |
-|            | thought of the idea,        |
-|            | literature review, prob def |
+| Emanuel    | Wrote Introduction and Introduced Idea       |
 | Jeet       | Research                    |
 | Charles    | Research                    |
 | Vikranth   | Video Presentation          |
