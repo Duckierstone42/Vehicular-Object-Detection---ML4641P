@@ -48,4 +48,4 @@ We plan to use accuracy, latency, as well as mAP (mean average precision), a ben
 | Emanuel    | Literature Review           |
 | Jeet       | Research                    |
 | Charles    | Research                    |
-| Vikranth   | Video Presentation          |
+| Vikranth   | Analyzing Dataset through Techniques Listed Above         |
