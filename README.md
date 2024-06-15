@@ -44,8 +44,8 @@ We plan to use accuracy, latency, as well as mAP (mean average precision), a ben
 
 | **Member** | **Contributions**           |
 | ---------- | --------------------------- |
-| Ankith     | Making website for proposal |
-| Emanuel    | Literature Review           |
-| Jeet       | Research                    |
-| Charles    | Research                    |
-| Vikranth   | Analyzing Dataset through Techniques Listed Above         |
+| Ankith     | Incorporating Neural Networks, Work on Research|
+| Emanuel    | Incorporating Neural Networks and data through R-CNN, etc|
+| Jeet       | Visualizations and Organization of Data|
+| Charles    | Writing Report and Organizing Information|
+| Vikranth   | Analyzing Dataset through Augementation/Research|
