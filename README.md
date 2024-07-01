@@ -21,6 +21,7 @@ We plan to use accuracy, latency, as well as mAP (mean average precision), a ben
 ### Visualizations
 
 ![image](https://github.com/Duckierstone42/ML4641Project/assets/133888360/21af7122-91bf-4a4f-a2f4-a8299ab9c172)
+The above image shows the bounding boxes around each object.
 
 ### Quantitative Metrics
 
