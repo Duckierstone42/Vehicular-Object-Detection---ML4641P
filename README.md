@@ -49,3 +49,7 @@ We plan to use accuracy, latency, as well as mAP (mean average precision), a ben
 | Jeet       |                             |
 | Charles    |                             |
 | Vikranth   | Video Presentation          |
+
+## Modifications
+
+-Make sure to use the Vehicle_Detection_Image_Dataset, and also have the yolov5s.pt weights downloaded before running the script
