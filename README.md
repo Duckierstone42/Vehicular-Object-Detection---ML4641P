@@ -20,6 +20,12 @@ We plan to use accuracy, latency, as well as mAP (mean average precision), a ben
 
 ### Visualizations
 
+### Quantitative Metrics
+
+### Analysis so far...
+
+### Next Steps
+
 ## References
 
 [1] S. S. A. Zaidi, M. S. Ansari, A. Aslam, N. Kanwal, M. Asghar, and B. Lee, “A Survey of Modern Deep Learning based Object Detection Models.” arXiv, May 12, 2021. doi: 10.48550/arXiv.2104.11892.
