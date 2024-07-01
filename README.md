@@ -2,17 +2,17 @@
 
 ## Introduction/Background
 
-For our project we wish to apply object-detection to the field of self-driving, specifically by implementing machine learning models that can detect vehicles, specifically cars, as shown in our [dataset](https://www.kaggle.com/datasets/sshikamaru/car-object-detection). This dataset includes over 1000 training images as well as 175 testing images, where image comes with a corresponding set of labels which indicate the size, position, and type of objects located in the image. If we end up needing more data, particularly to train some of the larger deep learning models we plan on using other datasets like the [car tracking and object detection dataset](https://www.kaggle.com/datasets/trainingdatapro/cars-video-object-tracking), which contains similar images, albeit at a different angle, perhaps allowing our models to better generalize. We currently plan on finetuning a variety of state-of the art object detection models [1], such as YOLO-v7 [2], and have looked at how others have applied such models onto the problem of vehicle detection [3].
+For our project we wish to apply object-detection to the field of self-driving, specifically by implementing machine learning models that can detect vehicles, specifically cars, as shown in our [dataset](https://www.kaggle.com/datasets/sshikamaru/car-object-detection). This dataset includes over 1000 training images as well as 175 testing images, where images come with a corresponding set of labels which indicate the size, position, and type of objects located in the image. If we end up needing more data, particularly to train some of the larger deep learning models we plan on using other datasets like the [car tracking and object detection dataset](https://www.kaggle.com/datasets/trainingdatapro/cars-video-object-tracking), which contains similar images, albeit at a different angle, perhaps allowing our models to better generalize. We currently plan on finetuning a variety of state-of the art object detection models [1], such as YOLO-v7 [2], and have looked at how others have applied such models onto the problem of vehicle detection [3].
 
 ## Problem Definition
 
-With self-driving cars becoming more and more relevant in current society, it is crucially important that they are able to detect other vehicles to prevent collision in a reliable, quick manner. We seek to explore and expand upon existing methods of using machine learning techniques to detect vehicles.
+With self-driving cars becoming more and more relevant in current society, it is crucially important that they are able to detect other vehicles to prevent collisions in a reliable, quick manner. We seek to explore and expand upon existing methods of using machine learning techniques to detect vehicles.
 
 ## Methods
 
-Due to the relatively low amount of data, we plan on increasing the amount and diversity of the data using data augmentation techniques such as color jittering, guassian noise, or blurring. We will also normalize our data, changing the intensity of the pixels to a more consistent distribution. Finally we will resize all the images to a common size, to ensure images have a consistent input size.
+Due to the relatively low amount of data, we plan on increasing the amount and diversity of the data using data augmentation techniques such as color jittering, gaussian noise, or blurring. We will also normalize our data, changing the intensity of the pixels to a more consistent distribution. Finally we will resize all the images to a common size, to ensure images have a consistent input size.
 
-Finally,for our supervised techniques, we plan on training a plain neural network on the object-detection dataset, just to gain a minimum baseline on which more advanced models can improve on. We then plan on fine-tuning state of the art object detection models, such as YOLO or R-CNN. Finally, we wil look at more novel object detection methods, such as those involving ViTs (Vision Transformers). As these models require lots of computational power to train, we plan on training them via either google colab or PACE-ICE.
+Finally, for our supervised techniques, we plan on training a plain neural network on the object-detection dataset, just to gain a minimum baseline on which more advanced models can improve on. We then plan on fine-tuning state of the art object detection models, such as YOLO or R-CNN. Finally, we will look at more novel object detection methods, such as those involving ViTs (Vision Transformers). As these models require lots of computational power to train, we plan on training them via either google colab or PACE-ICE.
 
 ## Results and Discussion
 
@@ -28,27 +28,25 @@ We plan to use accuracy, latency, as well as mAP (mean average precision), a ben
 
 ## Contributions
 
-### Gant Chart
+### Proposal Chart
 
-| **Member** | **Proposed Contributions**  |
-| ---------- | --------------------------- |
-| Ankith     | Making Website              |
-| Emanuel    | Wrote Introduction,         |
-|            | thought of the idea,        |
-|            | literature review, prob def |
-| Jeet       |                             |
-| Charles    |                             |
-| Vikranth   | Video Presentation          |
+| **Member** | **Contributions**                           |
+| ---------- | ------------------------------------------- |
+| Ankith     | Website, writing problem definition/methods |
+| Emanuel    | Wrote Introduction and Introduced Idea      |
+| Jeet       | Research                                    |
+| Charles    | Research                                    |
+| Vikranth   | Video Presentation                          |
 
-### Proposal Contributions
+### Gant Chart (See Excel File in Repo For More Information)
 
-| **Member** | **Contributions**           |
-| ---------- | --------------------------- |
-| Ankith     | Making website for proposal |
-| Emanuel    |                             |
-| Jeet       |                             |
-| Charles    |                             |
-| Vikranth   | Video Presentation          |
+| **Member** | **Contributions**                                         |
+| ---------- | --------------------------------------------------------- |
+| Ankith     | Incorporating Neural Networks, Work on Research           |
+| Emanuel    | Incorporating Neural Networks and data through R-CNN, etc |
+| Jeet       | Visualizations and Organization of Data                   |
+| Charles    | Writing Report and Organizing Information                 |
+| Vikranth   | Analyzing Dataset through Augementation/Research          |
 
 ## Modifications
 
