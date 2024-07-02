@@ -28,7 +28,7 @@ The above image is an example image from the training data set. The borders arou
 
 This is an image that our model has been tested on, with bounding boxes constructed for each object detected, as well as their associated confidence levels (between 0 and 1).
 
-The iamge from the test set shows clear resemblance to the image from the training set, constructing accurate green bounding boxes around each car and doing so with high confidence. There are some cars in the image that do not have bounding boxes around them, meaning either the confidence level to construct one is not above some specified threshold, or they have not been identified altogether. While already quite accurate, we hope to fine-tune the model some more to identify a higher number of objects.
+The iamge from the test set shows clear resemblance to the image from the training set, constructing accurate green bounding boxes around each car and doing so with high confidence. There are some cars in the image that do not have bounding boxes around them, meaning either the confidence level to construct one is not above some specified threshold, or they have not been identified altogether. While already quite accurate, we hope to fine-tune the model some more to identify even more objects with higher consistency.
 
 ### Quantitative Metrics
 
