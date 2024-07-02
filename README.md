@@ -26,7 +26,7 @@ The above image is an example image from the training data set. The borders arou
 
 <img src="https://github.com/Duckierstone42/ML4641Project/assets/133888360/18645006-08c7-4c16-92da-2bce7a2ef88b.png" width="500" height="500">
 
-This is an image that our model has been tested on, with bounding boxes constructed for each object detected, as well as their associated confidence levels (between 0 and 1.
+This is an image that our model has been tested on, with bounding boxes constructed for each object detected, as well as their associated confidence levels (between 0 and 1).
 
 ### Quantitative Metrics
 
