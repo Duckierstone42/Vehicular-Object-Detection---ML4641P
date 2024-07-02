@@ -20,7 +20,7 @@ We plan to use accuracy, latency, as well as mAP (mean average precision), a ben
 
 ### Visualizations
 
-<img src="https://github.com/Duckierstone42/ML4641Project/assets/133888360/2f584184-7b0c-42ac-a7f5-93eff9030090.png" width="100" height="100">
+<img src="https://github.com/Duckierstone42/ML4641Project/assets/133888360/2f584184-7b0c-42ac-a7f5-93eff9030090.png" width="400" height="400">
 
 The above image is an example image from the training data set. The borders around each object are called the "bounding boxes", and we aim to train our model to construct boxes just like these.
 
