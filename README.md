@@ -24,6 +24,8 @@ We plan to use accuracy, latency, as well as mAP (mean average precision), a ben
 
 The above image is an example image from the training data set. The borders around each object are called the "bounding boxes", and we aim to train our model to construct boxes just like these.
 
+Put image from test set here maybe
+
 ### Quantitative Metrics
 
 ### Analysis so far...
