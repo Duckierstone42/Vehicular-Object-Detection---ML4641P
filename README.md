@@ -18,6 +18,18 @@ Finally, for our supervised techniques, we plan on training a plain neural netwo
 
 We plan to use accuracy, latency, as well as mAP (mean average precision), a benchmark often used for detection problems. While it may be unrealistic to achieve in the tight timeframe of this project, we hope to be able to create/fine-tune object detection models capable of detecting vehicles with quantitative metrics at the level other papers have achieved on the same problem. For example, [3] was able to train a YOLOv3 model to achieve a mAP of 72.8. Realistically though, we hope to be able to train/finetune an object-detection model at a minimum mAP of around 20-30, a base value which should hopefully indicate that our model
 
+### Visualizations
+
+![image](https://github.com/Duckierstone42/ML4641Project/assets/133888360/21af7122-91bf-4a4f-a2f4-a8299ab9c172)
+
+The above image is an example image from the training data set. The borders around each object are called the "bounding boxes", and we aim to train our model to construct boxes just like these.
+
+### Quantitative Metrics
+
+### Analysis so far...
+
+### Next Steps
+
 ## References
 
 [1] S. S. A. Zaidi, M. S. Ansari, A. Aslam, N. Kanwal, M. Asghar, and B. Lee, “A Survey of Modern Deep Learning based Object Detection Models.” arXiv, May 12, 2021. doi: 10.48550/arXiv.2104.11892.
