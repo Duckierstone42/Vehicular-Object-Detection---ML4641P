@@ -32,13 +32,14 @@ The red boxes show the predicted bounding boxes while the green boxes show the a
 
 
 ### Quantitative Metrics
+
 <img src="https://github.com/Duckierstone42/ML4641Project/assets/119064696/cb367c35-6601-4017-99ee-b44ecc68cb63.png" width="500" height="500">
 
 ### Analysis so far...
 
 ### Next Steps
 
-
+Our next step is to us a Variational Autoencoder (VAE) to compress our input into a problem of a more manageable dimensionality. This will allow our model to run with much greater efficiency. We can even extend the use of the VAE to reduce/ignore noise in our input images, so we can detect objects with greater accuracy and confidence.
 
 ## References
 
