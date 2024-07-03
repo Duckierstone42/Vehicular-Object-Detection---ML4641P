@@ -31,6 +31,7 @@ This is an image that our model has been tested on, with bounding boxes construc
 The image from the test set shows clear resemblance to the image from the training set, constructing accurate green bounding boxes around each car and doing so with high confidence. There are some cars in the image that do not have bounding boxes around them, meaning either the confidence level to construct one is not above some specified threshold, or they have not been identified altogether. While already quite accurate, we hope to fine-tune the model some more to identify even more objects with higher consistency.
 
 ### Quantitative Metrics
+![image](https://github.com/Duckierstone42/ML4641Project/assets/119064696/cb367c35-6601-4017-99ee-b44ecc68cb63)
 
 ### Analysis so far...
 
