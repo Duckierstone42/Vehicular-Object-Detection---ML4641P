@@ -16,7 +16,7 @@ Finally, for our supervised techniques, we plan on training a plain neural netwo
 
 ## Results and Discussion
 
-We plan to use accuracy, latency, as well as mAP (mean average precision), a benchmark often used for detection problems. While it may be unrealistic to achieve in the tight timeframe of this project, we hope to be able to create/fine-tune object detection models capable of detecting vehicles with quantitative metrics at the level other papers have achieved on the same problem. For example, [3] was able to train a YOLOv3 model to achieve a mAP of 72.8. Realistically though, we hope to be able to train/finetune an object-detection model at a minimum mAP of around 20-30, a base value which should hopefully indicate that our model
+We plan to use accuracy, latency, as well as mAP (mean average precision), a benchmark often used for detection problems. While it may be unrealistic to achieve in the tight timeframe of this project, we hope to be able to create/fine-tune object detection models capable of detecting vehicles with quantitative metrics at the level other papers have achieved on the same problem. For example, [3] was able to train a YOLOv3 model to achieve a mAP of 72.8. Realistically though, we hope to be able to train/finetune an object-detection model at a minimum mAP of around 20-30, a base value which should hopefully indicate that our model is able to identify vehicles with reasonable accuracy.
 
 ### Visualizations
 
@@ -37,9 +37,13 @@ The red boxes show the predicted bounding boxes while the green boxes show the a
 
 ### Analysis so far...
 
+As seen in the image from our test set, this iteration of our model already does a very good job of detecting vehicles and constructing their proper bounding boxes. The red and green boxes align quite well, and there are no anomalies where the model is blatantly wrong. There is one minor issue in that not every single vehicle is being detected, but this only happens when it is far away from where the image was taken.
+
+
+
 ### Next Steps
 
-Our next step is to us a Variational Autoencoder (VAE) to compress our input into a problem of a more manageable dimensionality. This will allow our model to run with much greater efficiency. We can even extend the use of the VAE to reduce/ignore noise in our input images, so we can detect objects with greater accuracy and confidence.
+Our next step is to use a Variational Autoencoder (VAE) to compress our input into a problem of a more manageable dimensionality. This will allow our model to run with much greater efficiency. We can even extend the use of the VAE to reduce/ignore noise in our input images, so we can detect objects with greater accuracy and confidence.
 
 ## References
 
