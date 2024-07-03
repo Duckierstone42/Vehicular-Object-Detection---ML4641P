@@ -39,6 +39,8 @@ The red boxes show the predicted bounding boxes while the green boxes show the a
 
 ### Next Steps
 
+
+
 ## References
 
 [1] S. S. A. Zaidi, M. S. Ansari, A. Aslam, N. Kanwal, M. Asghar, and B. Lee, “A Survey of Modern Deep Learning based Object Detection Models.” arXiv, May 12, 2021. doi: 10.48550/arXiv.2104.11892.
@@ -69,6 +71,11 @@ The red boxes show the predicted bounding boxes while the green boxes show the a
 | Charles    | Writing Report and Organizing Information                 |
 | Vikranth   | Analyzing Dataset through Augementation/Research          |
 
-## Modifications
+## Repo Structure
 
--Make sure to use the Vehicle_Detection_Image_Dataset, and also have the yolov5s.pt weights downloaded before running the script
+* yolov5: Contains all the code from the ultralytics yolov5 implementation
+* requirements.txt: pip installable requirements
+* test.ipynb: Where all the code for finetuning YOLOv5 is on our specific dataset
+* modified_yolov5s.yaml: YOLOv5 model architecture but with a modified head to predict for one class
+
+
