@@ -2,7 +2,7 @@
 
 ## Introduction/Background
 
-For our project we wish to apply object-detection to the field of self-driving, specifically by implementing machine learning models that can detect vehicles, specifically cars, as shown in our [dataset](https://www.kaggle.com/datasets/sshikamaru/car-object-detection). This dataset includes over 1000 training images as well as 175 testing images, where images come with a corresponding set of labels which indicate the size, position, and type of objects located in the image. If we end up needing more data, particularly to train some of the larger deep learning models we plan on using other datasets like the [car tracking and object detection dataset](https://www.kaggle.com/datasets/trainingdatapro/cars-video-object-tracking), which contains similar images, albeit at a different angle, perhaps allowing our models to better generalize. We currently plan on finetuning a variety of state-of the art object detection models [1], such as YOLO-v7 [2], and have looked at how others have applied such models onto the problem of vehicle detection [3].
+For our project we wish to apply object-detection to the field of self-driving, specifically by implementing machine learning models that can detect vehicles, specifically cars, as shown in our [dataset](https://www.kaggle.com/datasets/farzadnekouei/top-view-vehicle-detection-image-dataset). We indicated that we were going to use a different dataset in the project proposal, but we ended up changing to this dataset. This dataset includes around 500 training images as well as around 100 testing images, where images come with a corresponding set of labels which indicate the size, position, and type of objects located in the image. If we end up needing more data, particularly to train some of the larger deep learning models we plan on using other datasets like the [car tracking and object detection dataset](https://www.kaggle.com/datasets/trainingdatapro/cars-video-object-tracking), which contains similar images, albeit at a different angle, perhaps allowing our models to better generalize. We currently plan on finetuning a variety of state-of the art object detection models [1], such as YOLO-v7 [2], and have looked at how others have applied such models onto the problem of vehicle detection [3].
 
 ## Problem Definition
 
@@ -13,6 +13,10 @@ With self-driving cars becoming more and more relevant in current society, it is
 Due to the relatively low amount of data, we plan on increasing the amount and diversity of the data using data augmentation techniques such as color jittering, gaussian noise, or blurring. We will also normalize our data, changing the intensity of the pixels to a more consistent distribution. Finally we will resize all the images to a common size, to ensure images have a consistent input size.
 
 Finally, for our supervised techniques, we plan on training a plain neural network on the object-detection dataset, just to gain a minimum baseline on which more advanced models can improve on. We then plan on fine-tuning state of the art object detection models, such as YOLO or R-CNN. Finally, we will look at more novel object detection methods, such as those involving ViTs (Vision Transformers). As these models require lots of computational power to train, we plan on training them via either google colab or PACE-ICE.
+
+### Implemented Method
+
+We currently have fine-tuned a small YOLO-v5 model on our dataset, with all the code present to do so in test.ipynb. We used Batch Gradient Descent over 20 epochs, using the Adam optimizer with a learning rate of .0001.
 
 ## Results and Discussion
 
@@ -32,9 +36,15 @@ The image from the test set shows clear resemblance to the image from the traini
 
 ### Quantitative Metrics
 
+We are currently only looking at the mAP (mean average precision), which is a metric that combines values from various other metrics (confusion matrix, recall, precision, IoU). We plan on looking at other metrics by the end of the project as well, and also look at the mAP for the train dataset, not just the test dataset.
+
 ### Analysis so far...
 
+As you can see from the visualization above, our loss steadily increases and our test mAP sharply increases in the beginning and then stops improving.
+
 ### Next Steps
+
+We currently have fine-tuned one small version of YOLO-v5, and in the future we plan to finetune models of even different sizes on the dataset to see how the number of parameters can influence how the mAP and loss evolve. Considering how well our model performed on our dataset, we will likely look at even smaller models, to see how reducing complexity affects our accuracy. We will also look into non-linear PCA using auto-encoders, particularly variational auto-encoders, to perform dimensionality reduction and potentially visualize our dataset.
 
 ## References
 
