@@ -37,15 +37,14 @@ The red boxes show the predicted bounding boxes while the green boxes show the a
 
 ### Analysis so far...
 
-As seen in the image from our test set, this iteration of our model already does a very good job of detecting vehicles and constructing their proper bounding boxes. The red and green boxes align quite well, and there are no anomalies where the model is blatantly wrong. There is one minor issue in that not every single vehicle is being detected, but this only happens when it is far away from where the image was taken.
+As seen in the image from our test set, this iteration of our model already does a very good job of detecting vehicles and constructing their proper bounding boxes. The red and green boxes align quite well, and there are no anomalies where the model is blatantly wrong. There is one minor issue where more vehicles than labeled are being detected, but this is more due to the dataset labeling not including every vehicle present in the scene.
 
-Via the graph above, it is also evident that we have surpassed our original benchmark of an mAP around 20-30, and are sitting in the 40-50 range. This means that our model is doing better than originally anticipated on identifying the true positives to (true positives + false positives) ratio.
+Via the graph above, it is also evident that we have surpassed our original benchmark of an mAP around 20-30, and are sitting in the 40-50 range. This means that our model is doing better than originally anticipated on identifying proper bounding boxes.
 
-Of course there are more things we aim to improve about this model, but for it being an early iteration of our final product we are happy with its effectiveness thus far.
 
 ### Next Steps
 
-Our next step is to use a Variational Autoencoder (VAE) to compress our input into a problem of a more manageable dimensionality. This will allow our model to run with much greater efficiency. We can even extend the use of the VAE to reduce/ignore noise in our input images, so we can detect objects with greater accuracy and confidence.
+One of our next steps will be to  use a Variational Autoencoder (VAE) to compress our input into a problem of a more manageable dimensionality. We also want to consider various different object detection models with various different data augmentation methods and compare how that affects the mAP.
 
 ## References
 
