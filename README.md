@@ -22,18 +22,17 @@ We plan to use accuracy, latency, as well as mAP (mean average precision), a ben
 
 <img src="https://github.com/Duckierstone42/ML4641Project/assets/133888360/2f584184-7b0c-42ac-a7f5-93eff9030090.png" width="500" height="500">
 
-The above image is an example image from the training data set. The borders around each object are called the "bounding boxes", and we aim to train our model to construct boxes just like these. The green boxes present
-above represent the labels given inthe dastaset.
+The above image is an example image from the training data set. The borders around each object are called the "bounding boxes", and we aim to train our model to construct boxes just like these. The green boxes present above represent the labels given in the dastaset.
 
-![image](https://github.com/Duckierstone42/ML4641Project/assets/119064696/503afa1b-588b-4daf-a997-4652bfd7ce0c)
+<img src="https://github.com/Duckierstone42/ML4641Project/assets/119064696/503afa1b-588b-4daf-a997-4652bfd7ce0c.png" width="500" height="500">
 
 This is an image that our model has been evaluated on, with bounding boxes constructed for each object detected, as well as their associated confidence levels (between 0 and 1).
 
-The red boxes show the predicted bounding boxes while the green boxes show the actual labels. You can clearly see that the object detection model is properly detecting cars, although because of the inconsistent ground truth labeling (a lot of the far away vehicles don't have bounding boxes even if they are vehicles), the model sometimes predicts objeccts even when they aren't technically present in the ground truth labeling. 
+The red boxes show the predicted bounding boxes while the green boxes show the actual labels. You can clearly see that the object detection model is properly detecting cars, although because of the inconsistent ground truth labeling (a lot of the far away vehicles don't have bounding boxes even if they are vehicles), the model sometimes predicts objects even when they aren't technically present in the ground truth labeling. 
 
 
 ### Quantitative Metrics
-![image](https://github.com/Duckierstone42/ML4641Project/assets/119064696/cb367c35-6601-4017-99ee-b44ecc68cb63)
+<img src="https://github.com/Duckierstone42/ML4641Project/assets/119064696/cb367c35-6601-4017-99ee-b44ecc68cb63.png" width="500" height="500">
 
 ### Analysis so far...
 
