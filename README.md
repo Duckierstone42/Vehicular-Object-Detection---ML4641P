@@ -22,13 +22,15 @@ We plan to use accuracy, latency, as well as mAP (mean average precision), a ben
 
 <img src="https://github.com/Duckierstone42/ML4641Project/assets/133888360/2f584184-7b0c-42ac-a7f5-93eff9030090.png" width="500" height="500">
 
-The above image is an example image from the training data set. The borders around each object are called the "bounding boxes", and we aim to train our model to construct boxes just like these.
+The above image is an example image from the training data set. The borders around each object are called the "bounding boxes", and we aim to train our model to construct boxes just like these. The green boxes present
+above represent the labels given inthe dastaset.
 
 ![image](https://github.com/Duckierstone42/ML4641Project/assets/119064696/503afa1b-588b-4daf-a997-4652bfd7ce0c)
 
-This is an image that our model has been tested on, with bounding boxes constructed for each object detected, as well as their associated confidence levels (between 0 and 1).
+This is an image that our model has been evaluated on, with bounding boxes constructed for each object detected, as well as their associated confidence levels (between 0 and 1).
 
-The image from the test set shows clear resemblance to the image from the training set, constructing accurate green bounding boxes around each car and doing so with high confidence. There are some cars in the image that do not have bounding boxes around them, meaning either the confidence level to construct one is not above some specified threshold, or they have not been identified altogether. While already quite accurate, we hope to fine-tune the model some more to identify even more objects with higher consistency.
+The red boxes show the predicted bounding boxes while the green boxes show the actual labels. You can clearly see that the object detection model is properly detecting cars, although because of the inconsistent ground truth labeling (a lot of the far away vehicles don't have bounding boxes even if they are vehicles), the model sometimes predicts objeccts even when they aren't technically present in the ground truth labeling. 
+
 
 ### Quantitative Metrics
 ![image](https://github.com/Duckierstone42/ML4641Project/assets/119064696/cb367c35-6601-4017-99ee-b44ecc68cb63)
