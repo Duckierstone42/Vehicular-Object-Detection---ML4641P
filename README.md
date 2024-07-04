@@ -20,34 +20,33 @@ We currently have fine-tuned a small YOLO-v5 model on our dataset, with all the 
 
 ## Results and Discussion
 
-We plan to use accuracy, latency, as well as mAP (mean average precision), a benchmark often used for detection problems. While it may be unrealistic to achieve in the tight timeframe of this project, we hope to be able to create/fine-tune object detection models capable of detecting vehicles with quantitative metrics at the level other papers have achieved on the same problem. For example, [3] was able to train a YOLOv3 model to achieve a mAP of 72.8. Realistically though, we hope to be able to train/finetune an object-detection model at a minimum mAP of around 20-30, a base value which should hopefully indicate that our model
+We plan to use accuracy, latency, as well as mAP (mean average precision), a benchmark often used for detection problems. While it may be unrealistic to achieve in the tight timeframe of this project, we hope to be able to create/fine-tune object detection models capable of detecting vehicles with quantitative metrics at the level other papers have achieved on the same problem. For example, [3] was able to train a YOLOv3 model to achieve a mAP of 72.8. Realistically though, we hope to be able to train/finetune an object-detection model at a minimum mAP of around 20-30, a base value which should hopefully indicate that our model is able to identify vehicles with reasonable accuracy.
 
 ### Visualizations
 
 <img src="https://github.com/Duckierstone42/ML4641Project/assets/133888360/2f584184-7b0c-42ac-a7f5-93eff9030090.png" width="500" height="500">
 
-The above image is an example image from the training data set. The borders around each object are called the "bounding boxes", and we aim to train our model to construct boxes just like these. The green boxes present
-above represent the labels given inthe dastaset.
+The above image is an example image from the training data set. The borders around each object are called the "bounding boxes", and we aim to train our model to construct boxes just like these. The green boxes present above represent the labels given in the dastaset.
 
-![image](https://github.com/Duckierstone42/ML4641Project/assets/119064696/503afa1b-588b-4daf-a997-4652bfd7ce0c)
+<img src="https://github.com/Duckierstone42/ML4641Project/assets/119064696/503afa1b-588b-4daf-a997-4652bfd7ce0c.png" width="500" height="500">
 
 This is an image that our model has been evaluated on, with bounding boxes constructed for each object detected, as well as their associated confidence levels (between 0 and 1).
 
-The red boxes show the predicted bounding boxes while the green boxes show the actual labels. You can clearly see that the object detection model is properly detecting cars, although because of the inconsistent ground truth labeling (a lot of the far away vehicles don't have bounding boxes even if they are vehicles), the model sometimes predicts objeccts even when they aren't technically present in the ground truth labeling.
+The red boxes show the predicted bounding boxes while the green boxes show the actual labels. You can clearly see that the object detection model is properly detecting cars, although because of the inconsistent ground truth labeling (a lot of the far away vehicles don't have bounding boxes even if they are vehicles), the model sometimes predicts objects even when they aren't technically present in the ground truth labeling.
 
 ### Quantitative Metrics
 
-![image](https://github.com/Duckierstone42/ML4641Project/assets/119064696/cb367c35-6601-4017-99ee-b44ecc68cb63)
-
-We are currently only looking at the mAP (mean average precision), which is a metric that combines values from various other metrics (confusion matrix, recall, precision, IoU). We plan on looking at other metrics by the end of the project as well, and also look at the mAP for the train dataset, not just the test dataset.
+<img src="https://github.com/Duckierstone42/ML4641Project/assets/119064696/cb367c35-6601-4017-99ee-b44ecc68cb63.png" width="500" height="500">
 
 ### Analysis so far...
 
-As you can see from the visualization above, our loss steadily increases and our test mAP sharply increases in the beginning and then stops improving.
+As seen in the image from our test set, this iteration of our model already does a very good job of detecting vehicles and constructing their proper bounding boxes. The red and green boxes align quite well, and there are no anomalies where the model is blatantly wrong. There is one minor issue where more vehicles than labeled are being detected, but this is more due to the dataset labeling not including every vehicle present in the scene.
+
+Via the graph above, it is also evident that we have surpassed our original benchmark of an mAP around 20-30, and are sitting in the 40-50 range. This means that our model is doing better than originally anticipated on identifying proper bounding boxes.
 
 ### Next Steps
 
-We currently have fine-tuned one small version of YOLO-v5, and in the future we plan to finetune models of even different sizes on the dataset to see how the number of parameters can influence how the mAP and loss evolve. Considering how well our model performed on our dataset, we will likely look at even smaller models, to see how reducing complexity affects our accuracy. We will also look into non-linear PCA using auto-encoders, particularly variational auto-encoders, to perform dimensionality reduction and potentially visualize our dataset.
+One of our next steps will be to use a Variational Autoencoder (VAE) to compress our input into a problem of a more manageable dimensionality. We also want to consider various different object detection models with various different data augmentation methods and compare how that affects the mAP.
 
 ## References
 
