@@ -16,7 +16,7 @@ Finally, for our supervised techniques, we plan on training a plain neural netwo
 
 ### Implemented Method
 
-We currently have fine-tuned a small YOLO-v5 model on our dataset, with all the code present to do so in test.ipynb. We used Batch Gradient Descent over 20 epochs, using the Adam optimizer with a learning rate of .0001. When we were pre-processing data, we performed data augmentation via color jittering and guassian blurring, through pytorch transforms, then ensured each image was 640 by 640 as input into the neural network.
+We currently have fine-tuned a small YOLO-v5 model on our dataset, with all the code present to do so in test.ipynb. We used Batch Gradient Descent over 20 epochs, using the Adam optimizer with a learning rate of .0001. When we were pre-processing data, we performed data augmentation via color jittering and gaussian blurring, through pytorch transforms, then ensured each image was 640 by 640 as input into the neural network.
 
 ## Results and Discussion
 
