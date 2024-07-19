@@ -18,13 +18,26 @@ Finally, for our supervised techniques, we plan on training a plain neural netwo
 
 We currently have fine-tuned a small YOLO-v5 model on our dataset, with all the code present to do so in test.ipynb. We used Batch Gradient Descent over 20 epochs, using the Adam optimizer with a learning rate of .0001. When we were pre-processing data, we performed data augmentation via color jittering and gaussian blurring through pytorch transforms, then ensured each image was 640 by 640 as input into the neural network.
 
+Below is a standard image from out dataset, without any transformations:
+
+![alt text](./images/non_transforms.png)
+
 #### Color Jittering
 
-Color jittering is applied via the transforms.ColorJitter torch transform, with a brightness of .2, a contrast of .2, a saturation of .2, and a hue of .1. These values determine how much exactly the brightness, contrast, saturation, and hue are randomly jittered. 
+Color jittering is applied via the transforms.ColorJitter torch transform, with a brightness of .4, a contrast of .4, a saturation of .4, and a hue of .4. These values determine how much exactly the brightness, contrast, saturation, and hue are randomly jittered. Below is a version of the above image
+with color jittering:
+
+![alt text](./images/color_jitter.png)
+
+Color jittering is random and so putting an image in a color jitter twice is bound to give you two, slightly different images. This means that for every
+epoch, we are looking at slightly different images than from the last epoch. This, in a way, increases the multiplies the size of our dataset by the number of epochs carried out.
 
 #### Gaussian Blurring
 
 Gaussian Blurring was applied via the transforms.GaussianBlur torch transform, with a kernel_size of (5,9) and sigma values of (.1,5). The sigma values define the standard deviation used for creating the kernel to perform the blurring. The gaussian kernel is then just convolved with the data in a similar matter to the convolutions in a convolutional neural network, or like in non-parameteric density estimation methods.
+Below is a version of of the above image with gaussian blurring:
+
+![alt text](./images/gaussian_blur.png)
 
 ## Results and Discussion
 
