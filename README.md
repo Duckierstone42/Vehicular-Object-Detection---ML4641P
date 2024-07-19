@@ -20,7 +20,7 @@ We currently have fine-tuned a small YOLO-v5 model on our dataset, with all the 
 
 #### Color Jittering
 
-Color jittering is applied via the transforms.ColorJitter torch transform, with a brightness of .2, a contrast of .2, a saturation of .2, and a hue of .1. These values determine how much exactly the brightness, contrast, saturation, and hue are randomly 
+Color jittering is applied via the transforms.ColorJitter torch transform, with a brightness of .2, a contrast of .2, a saturation of .2, and a hue of .1. These values determine how much exactly the brightness, contrast, saturation, and hue are randomly jittered. 
 
 #### Gaussian Blurring
 
