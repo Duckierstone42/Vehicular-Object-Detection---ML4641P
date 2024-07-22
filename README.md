@@ -58,6 +58,8 @@ The red boxes show the predicted bounding boxes while the green boxes show the a
 
 ![image](./images/graph.png)
 
+The above graphs show how the train/test loss and train/test mAP change over generations. We are using a standard Adam optimizer with a learning rate of 1e-4, and a custom loss function that was implemented in the yolov5 code we are using. The loss function includes three components, covering three areas (classification, confidence, and IoU overlap)
+
 ### Analysis so far...
 
 As seen in the image from our test set, this iteration of our model already does a very good job of detecting vehicles and constructing their proper bounding boxes. The red and green boxes align quite well, and there are no anomalies where the model is blatantly wrong. There is one minor issue where more vehicles than labeled are being detected, but this is more due to the dataset labeling not including every vehicle present in the scene.

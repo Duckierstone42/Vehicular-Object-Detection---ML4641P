@@ -6,3 +6,4 @@ torchvision
 torchmetrics
 requests
 pyyaml
+import-ipynb
