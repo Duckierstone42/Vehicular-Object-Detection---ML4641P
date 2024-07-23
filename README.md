@@ -16,7 +16,7 @@ Finally, for our supervised techniques, we plan on training a plain neural netwo
 
 ### Implemented Method
 
-We currently have fine-tuned a small YOLO-v5 model on our dataset, with all the code present to do so in test.ipynb. We used Batch Gradient Descent over 20 epochs, using the Adam optimizer with a learning rate of .0001. When we were pre-processing data, we performed data augmentation via color jittering and gaussian blurring through pytorch transforms, then ensured each image was 640 by 640 as input into the neural network.
+We currently have fine-tuned a small YOLO-v5 model on our dataset, with all the code present to do so in test.ipynb. We used Batch Gradient Descent over 20 epochs, using the Adam optimizer with a learning rate of .0001. When we were pre-processing data, we performed data augmentation via color jittering and gaussian blurring through pytorch transforms, then ensured each image was 640 by 640 as input into the neural network. We are also using a custom loss function that was implemented in the yolov5 code we are using. The loss function includes three components, covering three areas (classification, confidence, and IoU overlap).
 
 Below is a standard image from out dataset, without any transformations:
 
@@ -56,9 +56,18 @@ The red boxes show the predicted bounding boxes while the green boxes show the a
 
 ### Quantitative Metrics
 
-![image](./images/graph.png)
+![image](./images/map_yolov5s.png)
 
-The above graphs show how the train/test loss and train/test mAP change over generations. We are using a standard Adam optimizer with a learning rate of 1e-4, and a custom loss function that was implemented in the yolov5 code we are using. The loss function includes three components, covering three areas (classification, confidence, and IoU overlap)
+The above graph shows hows the train/test mAP changes over generations. As you can see, in the first half of the training, both train
+and test mAP consistently increase, but in the end, test mAP stagantes at around .4 while train mAP keeps on growing, reaching around .6 at the end. This is with both forms of data augmentation.
+
+![image](./images/loss_yolov5s.png)
+
+The above graph shows how the train/test loss changes over generations. They both consistently decrease, at about the same gradient, unlike the mAP. The test loss always appears to stay a little bit higher than the train loss, indicating that a little overfitting is occuring.
+
+![image](./images/inference_cpu_yolov5s.png)![image](./images/inference_cuda_yolov5s.png)
+
+The above graphs show the inferences times of the YOLOv5s model for one model on both the cpu and and gpu (via cuda). In both cases, 300 trails were taken, and each trial had a batch size of one. The GPU was warmed-up by some inference before recording its latency. It can clearly be seen that the gpu is 10x faster than the cpu, a trend which is only exacerabated when we increase the batch size.
 
 ### Analysis so far...
 
