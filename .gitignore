@@ -1,4 +1,6 @@
 Vehicle_Detection_Image_Dataset/
 *.pt
 *.zip
-yolo*.pt
+yolov5n.pt
+yolov5x.pt
+yolov5m.pt
