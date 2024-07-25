@@ -50,6 +50,7 @@ We plan to use accuracy, latency, as well as mAP (mean average precision), a ben
 The above image is an example image from the training data set. The borders around each object are called the "bounding boxes", and we aim to train our model to construct boxes just like these. The green boxes present above represent the labels given in the dastaset.
 
 ![alt text](./images/image.png)
+
 This is an image that our model has been evaluated on, with bounding boxes constructed for each object detected, as well as their associated confidence levels (between 0 and 1).
 
 The red boxes show the predicted bounding boxes while the green boxes show the actual labels. You can clearly see that the object detection model is properly detecting cars, although because of the inconsistent ground truth labeling (a lot of the far away vehicles don't have bounding boxes even if they are vehicles), the model sometimes predicts objects even when they aren't technically present in the ground truth labeling.
