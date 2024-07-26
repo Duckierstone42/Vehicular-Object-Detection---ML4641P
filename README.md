@@ -57,24 +57,44 @@ The red boxes show the predicted bounding boxes while the green boxes show the a
 
 ### Quantitative Metrics
 
-![image](./images/map_yolov5s.png)
+#### YOLOv5n
 
-The above graph shows hows the train/test mAP changes over generations. As you can see, in the first half of the training, both train
-and test mAP consistently increase, but in the end, test mAP stagantes at around .4 while train mAP keeps on growing, reaching around .6 at the end. This is with both forms of data augmentation.
+<img src="metrics\images\loss_yolov5n.pt.png" width=350>
+<img src="metrics\images\mAP_yolov5n.pt.png" width=350>
+<img src="metrics/images/latency_yolov5n.pt_NVIDIA H100 80GB HBM3.png" width=350>
 
-![image](./images/loss_yolov5s.png)
+#### YOLOv5m
 
-The above graph shows how the train/test loss changes over generations. They both consistently decrease, at about the same gradient, unlike the mAP. The test loss always appears to stay a little bit higher than the train loss, indicating that a little overfitting is occuring.
+<img src="metrics\images\loss_yolov5m.pt.png" width=350>
+<img src="metrics\images\mAP_yolov5m.pt.png" width=350>
+<img src="metrics/images/latency_yolov5m.pt_NVIDIA H100 80GB HBM3.png" width=350>
 
-![image](./images/inference_cpu_yolov5s.png)![image](./images/inference_cuda_yolov5s.png)
+#### YOLOV5x
 
-The above graphs show the inferences times of the YOLOv5s model for one model on both the cpu and and gpu (via cuda). In both cases, 300 trails were taken, and each trial had a batch size of one. The GPU was warmed-up by some inference before recording its latency. It can clearly be seen that the gpu is 10x faster than the cpu, a trend which is only exacerabated when we increase the batch size.
+<img src="metrics\images\loss_yolov5x.pt.png" width=350>
+<img src="metrics\images\mAP_yolov5x.pt.png" width=350>
+<img src="metrics/images/latency_yolov5x.pt_NVIDIA H100 80GB HBM3.png" width=350>
 
-### Analysis so far...
+#### Combined
 
-As seen in the image from our test set, this iteration of our model already does a very good job of detecting vehicles and constructing their proper bounding boxes. The red and green boxes align quite well, and there are no anomalies where the model is blatantly wrong. There is one minor issue where more vehicles than labeled are being detected, but this is more due to the dataset labeling not including every vehicle present in the scene.
+<img src="images\combined_loss.png" width=350>
+<img src="images\combined_mAP.png" width=350>
 
-Via the graph above, it is also evident that we have surpassed our original benchmark of an mAP around 20-30, and are sitting in the 40-50 range. This means that our model is doing better than originally anticipated on identifying proper bounding boxes.
+### Analysis of Graphs
+
+The above graphs show the loss and mAP of the both the train and test data of each model, as well as the latency of each model. There are 3 different YOLOv5 models of varying sizes. YOLOv5n has about 1 million parameters, YOLOv5m has around 20 million parameters, and YOLOv5x has around 80 million parameters.
+
+#### **Latency**
+
+All latency metrics were computed on an H100 compute node in PACE-ICE. The GPU was was warmed up before calculations took place, and the latency it took the model to process one image was measured 300 times, then graphed on a box plot. As you can see from the boxplots, both the YOLOv5n and YOLOv5m model take around 3.5 ms, while the larger YOLOv5x takes around 7 ms. Be aware that if images were passed in as batches instead of individually, the latency per image would be greatly reduced, due to parellization.
+
+#### **Loss**
+
+Almost every single loss curve, for each model and train vs. test have the same shape, with a rapid decrease in the beginning which tapers of. Every model consistently has a lower train loss than test loss, which makes sense as there is bound to be a slight amount of variance. As can be expected, the train data of the largest model has the lowest loss, while all the other loss curves are higher to varying degrees.
+
+#### **mAP**
+
+mAP, or mean average precision, is the main benchmark used for object detection models. As can be seen from the graphs, almost always at the end the model overfits and the train accuracy continues to grow past the point where the test grows. We don't actually see significant differences between the two larger models, but they are both significantly better than the smaller model.
 
 ### Next Steps
 
