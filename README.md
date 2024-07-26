@@ -134,5 +134,15 @@ We have looked at a variety of object detection architectures from the YOLOv5 fa
 
 - yolov5: Contains all the code from the ultralytics yolov5 implementation
 - requirements.txt: pip installable requirements
-- test.ipynb: Where all the code for finetuning YOLOv5 is on our specific dataset
-- modified_yolov5s.yaml: YOLOv5 model architecture but with a modified head to predict for one class
+- run_model.ipynb: Where all the code for finetuning various YOLOv5 models on our dataset is
+- modified_yolov5n.yaml: YOLOv5n model architecture but with a modified head to predict for one class
+- modified_yolov5s.yaml: YOLOv5s model architecture but with a modified head to predict for one class
+- modified_yolov5m.yaml: YOLOv5m model architecture but with a modified head to predict for one class
+- modified_yolov5l.yaml: YOLOv5l model architecture but with a modified head to predict for one class
+- modified_yolov5x.yaml: YOLOv5x model architecture but with a modified head to predict for one class
+- README.md : This README file
+- variational_autoencoder.py: Work in progress implementation of a variational auto-encoder
+- create_graphs.ipynb: Script to creates graphs
+- images: Some images used in README
+- metrics: Contains images of metrics and the metrics themselves, like mAP, loss, and latency
+- gant_chart.xlsx: Chart of all the responsibilities
