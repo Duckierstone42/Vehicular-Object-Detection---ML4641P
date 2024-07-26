@@ -98,7 +98,7 @@ mAP, or mean average precision, is the main benchmark used for object detection 
 
 ### Next Steps
 
-One of our next steps will be to use a Variational Autoencoder (VAE) to compress our input into a problem of a more manageable dimensionality. We also want to consider various different object detection models with various different data augmentation methods and compare how that affects the mAP.
+We have looked at a variety of object detection architectures from the YOLOv5 family of models, as well as played around with variational Auto-encoders to find a non-linear latent representation of our data. In the future, if we continue this project, we would definetely like to look at a variety of other object detection architectures, like Fast-RCNN, or other non CNN based architectures, such as ones based on ViT's, Vision Transformers.
 
 ## References
 
